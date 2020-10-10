@@ -1,7 +1,11 @@
-.main{
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.menu{
+    margin-right: 15px;
 }
 
 select{
@@ -10,5 +14,20 @@ select{
     margin-right: 10px;
     padding: 2px 15px 2px 5px;
     font-size: 11px;
+    box-sizing: border-box;
+}
+
+.selectDrop{
     position: relative;
+}
+
+.selectDrop::after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 5px; height: 5px;
+    top: 50%; right: 18px;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg) translateY(-50%);
 }
